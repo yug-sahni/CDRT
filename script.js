@@ -16,10 +16,12 @@ function getUserLocation() {
         alert("Geolocation is not supported by this browser.");
     }
 }
-export const latitude = position.coords.latitude;
-export const longitude = position.coords.longitude;
+
+let latitude, longitude;
+
 function showPosition(position) {
-    
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
     console.log(latitude, longitude);
     
     // const locationBox = document.getElementById('locationBox');
