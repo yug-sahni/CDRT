@@ -18,26 +18,33 @@
             <div id="map"></div>
         </div>
         <div class="list-container">
+            <!-- Disaster Type Dropdown -->
             <div class="dropdown">
-                <button onclick="toggleDropdown()" class="dropbtn" id="selectedItem">Select an item</button>
+                <button onclick="toggleDropdown('itemList')" class="dropbtn" id="selectedItem">Select Disaster Type</button>
                 <div id="itemList" class="dropdown-content">
-                    <!-- List items will be dynamically added here -->
+                    <!-- Disaster type items will be dynamically added here -->
                 </div>
             </div>
             <br>
-            <!-- <div id="locationBox">Waiting for location...</div> -->
-            <ul>
-                <li>Earthquake</li>
-                <li>Flood</li>
-                <li>Extreme heat</li>
-                <li>Fire</li>
-                <li>Power cut</li>
-                <li>Road block</li>
-                <li>No water</li>
-                <li></li>
-            </ul>
+            
+            <!-- Severity Dropdown -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('severityList')" class="dropbtn" id="selectedSeverity">Select Severity</button>
+                <div id="severityList" class="dropdown-content">
+                    <!-- Severity items will be dynamically added here -->
+                </div>
+            </div>
+            <br>
+            
+            <!-- Help Status Dropdown -->
+            <div class="dropdown">
+                <button onclick="toggleDropdown('authList')" class="dropbtn" id="selectedAuth">Help Status</button>
+                <div id="authList" class="dropdown-content">
+                    <!-- Help status items will be dynamically added here -->
+                </div>
+            </div>
+            <br>
         </div>
-        
     </div>
 
     <script src="script.js"></script>

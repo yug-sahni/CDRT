@@ -4,12 +4,24 @@ const items = [
     "Avalanche", "Severe Storm"
 ];
 
+const severities = [
+    "Low", "Moderate", "High"
+];
+
+const auth = [
+    "True", "False"
+];
 
 const itemList = document.getElementById('itemList');
 const selectedItem = document.getElementById('selectedItem');
 
+const severityList = document.getElementById('severityList');
+const selectedSeverity = document.getElementById('selectedSeverity');
+
+const authList = document.getElementById('authList');
+const selectedAuth = document.getElementById('selectedAuth');
+
 function getUserLocation() {
-    // Check if Geolocation is supported
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
@@ -23,13 +35,10 @@ function showPosition(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
     console.log(latitude, longitude);
-    
-    // const locationBox = document.getElementById('locationBox');
-    // locationBox.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
 }
 
 function showError(error) {
-    switch(error.code) {
+    switch (error.code) {
         case error.PERMISSION_DENIED:
             alert("User denied the request for Geolocation.");
             break;
@@ -44,36 +53,55 @@ function showError(error) {
             break;
     }
 }
-// getUserLocation();
 
+// Populate disaster type dropdown
 items.forEach(item => {
     const listItem = document.createElement('div');
     listItem.textContent = item;
     listItem.addEventListener('click', () => {
-        // alert(`You selected ${item}`);
         selectedItem.textContent = item;
-        // Here you can add functionality to interact with the map
-        toggleDropdown();
+        toggleDropdown('itemList');
     });
     itemList.appendChild(listItem);
 });
 
-function toggleDropdown() {
-    // getUserLocation();
-    document.getElementById("itemList").classList.toggle("show");
+// Populate severity dropdown
+severities.forEach(severity => {
+    const listItem = document.createElement('div');
+    listItem.textContent = severity;
+    listItem.addEventListener('click', () => {
+        selectedSeverity.textContent = severity;
+        toggleDropdown('severityList');
+    });
+    severityList.appendChild(listItem);
+});
+
+// Populate authority list dropdown
+auth.forEach(authority => {
+    const listItem = document.createElement('div');
+    listItem.textContent = authority;
+    listItem.addEventListener('click', () => {
+        selectedAuth.textContent = authority;
+        toggleDropdown('authList');
+    });
+    authList.appendChild(listItem);
+});
+
+// Toggle dropdown visibility
+function toggleDropdown(id) {
+    document.getElementById(id).classList.toggle('show');
 }
 
-window.onclick = function(event) {
-    // getUserLocation();
+// Handle clicks outside the dropdown
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }
         }
     }
     getUserLocation();
-}
-// hello
+};
