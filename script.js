@@ -44,7 +44,7 @@ function showError(error) {
             break;
     }
 }
-getUserLocation();
+// getUserLocation();
 
 items.forEach(item => {
     const listItem = document.createElement('div');
@@ -59,10 +59,12 @@ items.forEach(item => {
 });
 
 function toggleDropdown() {
+    // getUserLocation();
     document.getElementById("itemList").classList.toggle("show");
 }
 
 window.onclick = function(event) {
+    // getUserLocation();
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         for (var i = 0; i < dropdowns.length; i++) {
@@ -72,5 +74,6 @@ window.onclick = function(event) {
             }
         }
     }
+    getUserLocation();
 }
 // hello
