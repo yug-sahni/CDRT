@@ -1,7 +1,9 @@
 const items = [
-    "Coffee shop", "Grocery store", "Gym", "Park", "Library",
-    "Restaurant", "Movie theater", "Bakery", "Pharmacy", "Post office"
+    "Earthquake", "Volcanic Eruption", "Tsunami", "Hurricane", "Tornado",
+    "Flood", "Drought", "Landslide", "Wildfire", "Extreme Heat",
+    "Avalanche", "Severe Storm"
 ];
+
 
 const itemList = document.getElementById('itemList');
 
