@@ -1,3 +1,4 @@
+import { latitude, longitude } from './script.js';
 var map = L.map('map').setView([28, 77], 13);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -5,4 +6,4 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-var marker = L.marker([28.392888166158585, 77.06057772935034]).addTo(map);
+var marker = L.marker([latitude, longitude]).addTo(map);
