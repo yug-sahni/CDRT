@@ -6,12 +6,14 @@ const items = [
 
 
 const itemList = document.getElementById('itemList');
+const selectedItem = document.getElementById('selectedItem');
 
 items.forEach(item => {
     const listItem = document.createElement('div');
     listItem.textContent = item;
     listItem.addEventListener('click', () => {
         alert(`You selected ${item}`);
+        selectedItem.textContent = item;
         // Here you can add functionality to interact with the map
         toggleDropdown();
     });
