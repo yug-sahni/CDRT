@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Dropdown List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="map-container">
+            <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=73.12774658203126%2C24.993526387488956%2C76.65985107421875%2C26.662186843258567&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=9/25.831/74.894">View Larger Map</a></small>
+        </div>
+        <div class="list-container">
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" class="dropbtn">Select an item</button>
+                <div id="itemList" class="dropdown-content">
+                    <!-- List items will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
