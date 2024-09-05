@@ -1,15 +1,19 @@
 const items = [
-    "Coffee shop", "Grocery store", "Gym", "Park", "Library",
-    "Restaurant", "Movie theater", "Bakery", "Pharmacy", "Post office"
+    "Earthquake", "Volcanic Eruption", "Tsunami", "Hurricane", "Tornado",
+    "Flood", "Drought", "Landslide", "Wildfire", "Extreme Heat",
+    "Avalanche", "Severe Storm"
 ];
 
+
 const itemList = document.getElementById('itemList');
+const selectedItem = document.getElementById('selectedItem');
 
 items.forEach(item => {
     const listItem = document.createElement('div');
     listItem.textContent = item;
     listItem.addEventListener('click', () => {
-        alert(`You selected ${item}`);
+        // alert(`You selected ${item}`);
+        selectedItem.textContent = item;
         // Here you can add functionality to interact with the map
         toggleDropdown();
     });
