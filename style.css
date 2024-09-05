@@ -6,6 +6,7 @@ body, html {
     overflow: hidden;
     /*hello*/
 }
+
 .container {
     display: flex;
     height: 100%;
@@ -17,6 +18,12 @@ body, html {
     align-items: center;
     justify-content: center;
 }
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
 .list-container {
     flex: 1;
     max-width: 300px;

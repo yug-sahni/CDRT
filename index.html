@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map with Dropdown List</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="map-container">
-            <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=73.12774658203126%2C24.993526387488956%2C76.65985107421875%2C26.662186843258567&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=9/25.831/74.894">View Larger Map</a></small>
+            <div id="map"></div>
         </div>
         <div class="list-container">
             <div class="dropdown">
@@ -22,5 +28,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="mapLoad.js"></script>
 </body>
 </html>
