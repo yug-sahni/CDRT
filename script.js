@@ -12,7 +12,7 @@ items.forEach(item => {
     const listItem = document.createElement('div');
     listItem.textContent = item;
     listItem.addEventListener('click', () => {
-        alert(`You selected ${item}`);
+        // alert(`You selected ${item}`);
         selectedItem.textContent = item;
         // Here you can add functionality to interact with the map
         toggleDropdown();
